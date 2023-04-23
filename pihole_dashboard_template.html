@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pi-hole Dashboard for {{ hostname }}</h1>
+    <table>
+        <tr>
+            <th>Statistic</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Domains Being Blocked</td>
+            <td>{{ domains_being_blocked }}</td>
+        </tr>
+        <tr>
+            <td>DNS Queries Today</td>
+            <td>{{ dns_queries_today }}</td>
+        </tr>
+        <tr>
+            <td>Ads Blocked Today</td>
+            <td>{{ ads_blocked_today }}</td>
+        </tr>
+        <tr>
+            <td>Ads Percentage Today</td>
+            <td>{{ ads_percentage_today }}%</td>
+        </tr>
+        <tr>
+            <td>Unique Domains</td>
+            <td>{{ unique_domains }}</td>
+        </tr>
+        <tr>
+            <td>Queries Forwarded</td>
+            <td>{{ queries_forwarded }}</td>
+        </tr>
+        <tr>
+            <td>Queries Cached</td>
+            <td>{{ queries_cached }}</td>
+        </tr>
+        <tr>
+            <td>Clients Ever Seen</td>
+            <td>{{ clients_ever_seen }}</td>
+        </tr>
+        <tr>
+            <td>Unique Clients</td>
+            <td>{{ unique_clients }}</td>
+        </tr>
+        <tr>
+            <td>DNS Queries (All Types)</td>
+            <td>{{ dns_queries_all_types }}</td>
+        </tr>
+        <tr>
+            <td>Reply CNAME</td>
+            <td>{{ reply_CNAME }}</td>
+        </tr>
+        <tr>
+            <td>Reply IP</td>
+            <td>{{ reply_IP }}</td>
+        </tr>
+    </table>
+</body>
+</html>
